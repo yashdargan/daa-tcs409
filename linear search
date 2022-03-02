@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{ int a[10],n;
+ printf("enter n");
+ scanf("%d",&n);
+ for(int i=0;i<n;i++)
+ { scanf("%d",&a[i]);
+ }
+ int key;
+ printf("enter the key");
+ scanf("%d",&key);
+ int flag=0,i=0;
+ while(1)
+ { if(key==a[i])
+     { flag =1;
+       break;
+     }
+     i++;
+ }
+ printf("element founded at %d",i+1);
+}
