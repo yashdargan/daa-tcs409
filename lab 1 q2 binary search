@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+int binarysearch(int a[],int key,int n)
+{ int l=0,r=n;
+ while(l<=r)
+ {int mid =l+(r-l)/2;
+ if(a[mid]==key)
+ { return mid;
+ }
+ if(a[mid]>key)
+    r=mid-1;
+else
+   l=mid+1;
+ }
+ return -1;
+}
+int main()
+{ printf("enter the n ");
+  int n;
+  scanf("%d",&n);
+  int a[n];
+  for(int i=0;i<n;i++)
+  { printf("enter the index %d ",i);
+    scanf("%d",&a[i]);
+  }int key,f=-1;
+  printf("enter the key ");
+  scanf("%d",&key);
+  f=binarysearch(a,key,n);
+  if(f==-1)
+    printf("element not founded\n");
+  else
+    printf("element founded at %d",f);
+
+}
